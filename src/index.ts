@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/unified-signatures */
 /* eslint-disable no-dupe-class-members */
-/* eslint-disable no-prototype-builtins */
 
 import * as grammar from './grammar';
 import {coerceBadly, ISchemaOptions, Schema} from './schema';
+
+export {INanoDate, FieldType, Precision, Raw, TimePrecision, escape, toNanoDate} from './grammar';
+export {ISchemaOptions} from './schema';
 
 const defaultOptions: IPointFormatterOptions = Object.freeze({
 	schema: []
@@ -29,7 +31,7 @@ export interface IPoint {
 	/**
 	* Measurement is the Influx measurement name.
 	*/
-	measurement?: string;
+	measurement: string;
 
 	/**
 	* Tags is the list of tag values to insert.
@@ -89,6 +91,10 @@ export class PointFormatter {
 	constructor(options: IPointFormatterOptions);
 
 	constructor(options?: any) {
+		if (!options) {
+			options = {};
+		}
+
 		const resolved = options as IPointFormatterOptions;
 		this._options = defaults(resolved, defaultOptions);
 		this._options.schema.forEach(schema => this._createSchema(schema));
@@ -109,7 +115,7 @@ export class PointFormatter {
 	 * @param point
 	 * @param options
 	 */
-	public formatPoint(point: IPoint, options: IFormatOptions): string {
+	public formatPoint(point: IPoint, options: IFormatOptions = {}): string {
 		const {
 			precision = 'n' as grammar.TimePrecision
 		} = options;

@@ -1,6 +1,7 @@
 /* eslint-env node, mocha */
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint max-nested-callbacks: ["error", 5] */
 
 import {expect} from 'chai';
 
