@@ -19,15 +19,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/node-influx/node-influx.git"
+    "url": "https://github.com/JeffAshton/node-influx-point-formatter.git"
   },
   "keywords": [
     "influx",
     "influxdb",
     "time",
-    "series",
-    "client",
-    "db"
+    "series"
   ],
   "contributors": [
     "Ben Evans <ben@bensbit.co.uk> (http://bensbit.co.uk)",
