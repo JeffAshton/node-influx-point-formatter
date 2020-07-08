@@ -1,4 +1,5 @@
 /* eslint-env node, mocha */
+/* eslint-disable @typescript-eslint/camelcase */
 
 import {expect} from 'chai';
 
