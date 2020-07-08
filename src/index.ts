@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/unified-signatures */
 /* eslint-disable no-dupe-class-members */
-/* eslint-disable no-prototype-builtins */
 
 import * as grammar from './grammar';
 import {coerceBadly, ISchemaOptions, Schema} from './schema';
