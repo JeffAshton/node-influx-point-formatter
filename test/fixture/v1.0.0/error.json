@@ -1,3 +1,0 @@
-{
-  "error": "error parsing query: found this, expected SELECT, DELETE, SHOW, CREATE, DROP, GRANT, REVOKE, ALTER, SET, KILL at line 1, char 1"
-}
