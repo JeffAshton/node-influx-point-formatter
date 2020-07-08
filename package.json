@@ -1,6 +1,6 @@
 {
   "name": "influx-point-formatter",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "InfluxDB Point Formatter",
   "main": "./lib/src/index.js",
   "typings": "./lib/src/index",
@@ -14,8 +14,7 @@
     "test:lint": "eslint . --ext .ts",
     "test:travis": "npm-run-all clean test:lint build:dist && istanbul cover _mocha --report lcovonly -- lib/test/unit/*.test.js",
     "test:unit": "mocha --require ts-node/register test/unit/*.test.ts",
-    "test:watch": "mocha -R min --watch --require ts-node/register test/unit/*.test.ts",
-    "semantic-release": "semantic-release"
+    "test:watch": "mocha -R min --watch --require ts-node/register test/unit/*.test.ts"
   },
   "repository": {
     "type": "git",
@@ -48,7 +47,6 @@
     "istanbul": "0.4.5",
     "mocha": "^8.0.1",
     "npm-run-all": "4.1.5",
-    "semantic-release": "^17.1.1",
     "ts-node": "8.3.0",
     "typescript": "3.5.3"
   },
